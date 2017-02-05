@@ -110,15 +110,20 @@ def draw(image, r, theta):
             x = int((r-y*np.sin(theta))/np.cos(theta))
             if 0 <= x < len(image[y]):
                 image[y][x] = 255
-    cv2.imshow('a', image); cv2.waitKey(0);
 def main():
     argc = len(sys.argv)
-    if not (argc == 2 or argc == 4):
+    if not (argc == 2 or argc == 4 or argc == 5):
         print("Usage: python3 detect.py IMAGE [r] [theta]")
         return
-    if (argc == 2):
+    if argc == 2:
         superm2(cv2.imread(sys.argv[1], 0))
+    elif argc == 4:
+        image = cv2.imread(sys.argv[1], 0)
+        draw(image, float(sys.argv[2]), float(sys.argv[3]))
+        cv2.imshow('a', image); cv2.waitKey(0);
     else:
-        draw(cv2.imread(sys.argv[1], 0), float(sys.argv[2]), float(sys.argv[3]))
+        image = cv2.imread(sys.argv[1], 0)
+        draw(image, float(sys.argv[2]), float(sys.argv[3]))
+        cv2.imwrite('{}'.format(sys.argv[4]), image)
 if __name__ == '__main__':
     main()
