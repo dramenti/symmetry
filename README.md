@@ -2,11 +2,12 @@
 
 ##About
 
-A line of symmetry detector that (sort of) implements the reflection detection from
-this Computer Vision research paper:
+A line of symmetry detector that finds a line of reflective symmetry in an image.
+Created as a final project for the CS39R Symmetry and Topology seminar in Spring 2016.
+
+It implements the algorithm from this Computer Vision research paper:
 
 [Detecting Symmetry and Symmetric Constellations of Features] (http://www.cse.psu.edu/~yul11/CourseFall2006_files/loy_eccv2006.pdf) by Loy and Eklundh.
-
 ##To Run
 
 You need OpenCV, Matplotlib, and NumPy to run the script.
