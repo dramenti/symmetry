@@ -2,8 +2,10 @@
 
 ##About
 
-A line of symmetry detector that (sort of) implements the reflection detection in
-the research paper [Detecting Symmetry and Symmetric Constellations of Features] (http://www.cse.psu.edu/~yul11/CourseFall2006_files/loy_eccv2006.pdf) by Loy and Eklundh.
+A line of symmetry detector that (sort of) implements the reflection detection from
+this Computer Vision research paper:
+
+[Detecting Symmetry and Symmetric Constellations of Features] (http://www.cse.psu.edu/~yul11/CourseFall2006_files/loy_eccv2006.pdf) by Loy and Eklundh.
 
 ##To Run
 
@@ -22,5 +24,5 @@ Then, run `python3 detect.py butterfly.png [r] [theta]` where
 instead of [r] [theta] you put the numbers from the hexplot, e.g.
 `python3 detect.py butterfly.png 4.8 2.4` which will display the image with a line drawn on it!
 
-Then, press the **0** key to exit
+Then, press the **0** (ZERO) key to exit
 (don't try to exit out of it normally, it doesn't work for some reason!)
