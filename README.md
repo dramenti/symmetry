@@ -26,3 +26,8 @@ instead of [r] [theta] you put the numbers from the hexplot, e.g.
 
 Then, press the **0** (ZERO) key to exit
 (don't try to exit out of it normally, it doesn't work for some reason!)
+
+To save the image, run that same command but add a filename at the end to save the
+line drawn version, like this:
+
+`python3 detect.py butterfly.png 4.8 2.4 butterfly-symmetry.png`
