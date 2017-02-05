@@ -1,0 +1,11 @@
+Symmetry Detector
+
+About
+
+A line of symmetry detector that (sort of) implements the reflection detection in
+the research paper "Detecting Symmetry and Symmetric Constellations of Features" (Loy and Eklundh).
+You can view the paper here: http://www.cse.psu.edu/~yul11/CourseFall2006_files/loy_eccv2006.pdf
+
+To Run
+
+You need OpenCV, Matplotlib, and NumPy to run the script.
