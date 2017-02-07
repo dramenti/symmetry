@@ -32,3 +32,17 @@ To save the image, run that same command but add a filename at the end to save t
 line drawn version, like this:
 
 `python3 detect.py butterfly.png 4.8 2.4 butterfly-symmetry.png`
+
+##How it Works
+How does the symmetry detection work? At a high level, essentially what 
+is does is compare feature points on the image to those on the 
+reflected version of the image. A feature point is essentially some sort
+of distinctive point (really a small region around a point), like an edge,
+corner, or something. These are found using the Scale Invariant Feature Transform (SIFT).
+
+With each feature point comes its descriptor, which characterizes the region
+right around that point. What this means is, if you were to have two different photographs of the same object and ran SIFT on each picture, ideally a keypoint at a certain spot on the object in image 1 should have a descriptor very similar to the descriptor on a point on the object in image 2 that corresponds to the same 'part' of the object.
+
+In this case, our two images are the original and a flipped/mirrored version of it. Then, keypoints of original are matched with those of mirrored version based on how similar the descriptor is. The idea is that the mirrored keypoint is the reflected version from the original, that now looks like the original after reflection. Then, a weighted vote is cast for the line of symmetry that would create such a reflection.
+
+The 'votes' are tallied and the result is the hexbin plot of (r, theta) values, which represent a line in polar coordinates.
