@@ -1,6 +1,6 @@
-#Loy-Eklundh Symmetry Detection
+# Loy-Eklundh Symmetry Detection
 
-##About
+## About
 
 A line of symmetry detector that finds a line of reflective symmetry in an image.
 Created as a final project for the CS39R Symmetry and Topology seminar in Spring 2016.
@@ -8,11 +8,11 @@ Created as a final project for the CS39R Symmetry and Topology seminar in Spring
 It implements the algorithm from this Computer Vision research paper:
 
 [Detecting Symmetry and Symmetric Constellations of Features] (http://www.cse.psu.edu/~yul11/CourseFall2006_files/loy_eccv2006.pdf) by Loy and Eklundh.
-##To Run
+## To Run
 
 You need OpenCV, Matplotlib, and NumPy to run the script.
 
-##How to Use
+## How to Use
 To run, first find an image you want to use it on, say 'butterfly.png' for example.
 
 First, run `python3 detect.py butterfly.png` which will, using matplotlib, give you a
@@ -33,7 +33,7 @@ line drawn version, like this:
 
 `python3 detect.py butterfly.png 4.8 2.4 butterfly-symmetry.png`
 
-##How it Works
+## How it Works
 How does the symmetry detection work? At a high level, essentially what 
 is does is compare feature points on the image to those on the 
 reflected version of the image. A feature point is essentially some sort
